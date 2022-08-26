@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+ --soft-blue: hsl(215, 51%, 70%);
+ --cyan: hsl(178, 100%, 50%);
+ --main-bgColor: hsl(217, 54%, 11%);
+ --card-bgColor: hsl(216, 50%, 16%);
+ --line-color: hsl(215, 32%, 27%);
+ --white: hsl(0, 0%, 100%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+}
+.main{
+  background-color: var(--main-bgColor);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.image-container{
+  position: relative;
+  width: 100%;
+}
+.image{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+.shadow img{
+  left: 7rem;
+  top: 7rem;
+  position: absolute;
+  width: 50px;
+}
+.shadow{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 17rem;
+  border-radius: 10px;
+  background-color: hsl(178, 100%, 50%,0.5);
+  display: none;
+}
+.container{
+  box-sizing: border-box;
+  background-color: var(--card-bgColor);
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  margin-bottom: 1rem;
+}
+.container h2{
+  color: var(--white);
+  font-family: outfit;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.container p{
+  color: var(--soft-blue);
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.container .price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:1rem;
+}
+.container .price h3{
+  color: var(--cyan);
+}
+.container .price p{
+  margin: 0;
+}
+.price-header , .time-left{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.container hr{
+  background: var(--line-color);
+  border: none;
+  height: 1px;
+  margin-bottom: 1rem;
+}
+.owner{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.owner img{
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.container .owner p{
+ margin: 0;
+}
+span{
+  cursor: pointer;
+  color: var(--white);
+}
+span:hover{
+  color: var(--cyan);
+}
+.container h2:hover{
+  color: var(--cyan);
+}
+.container .image-container .image:hover + .shadow{
+  display: block;
+}
+.attribution { 
+  font-size: 11px; text-align: center;
+  color: var(--soft-blue);
+   }
+.attribution a ,p{ 
+    color: var(--soft-blue);
+}
+  
